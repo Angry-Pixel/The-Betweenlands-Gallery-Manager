@@ -235,7 +235,7 @@ public class EntryPanel extends JPanel {
 							float relHeight = (1.0F - (maxDim - image.getHeight()) / (float) maxDim);
 							int drawnWidth = (int) Math.floor(Math.min(EntryPanel.this.manager.getMaxImageSize(), image.getWidth()) * relWidth);
 							int drawnHeight = (int) Math.floor(Math.min(EntryPanel.this.manager.getMaxImageSize(), image.getHeight()) * relHeight);
-							BufferedImage resized = new BufferedImage(drawnWidth, drawnHeight, image.getType());
+							BufferedImage resized = new BufferedImage(drawnWidth, drawnHeight, BufferedImage.TYPE_INT_ARGB);
 							Graphics2D g = resized.createGraphics();
 							g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
 							g.drawImage(image, 0, 0, drawnWidth, drawnHeight, 0, 0, image.getWidth(), image.getHeight(), null);
